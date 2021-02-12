@@ -21,6 +21,9 @@ class BrowserFrame:
     def load(self, url):
         self.__browser.get(url)
 
+    def implicit_wait(self, seconds):
+        time.sleep(seconds)
+
     def get_image(self):
         try:
             download = self.__browser.find_element(By.CLASS_NAME, 'download')
